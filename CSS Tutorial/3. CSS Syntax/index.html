@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    .back { background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding:15px; }
+  </style>
+</head>
+<body>
+  <h1>CSS Syntax and selectors</h1>
+
+  <hr>
+
+  <h2>CSS 구문</h2>
+  <p>CSS 규칙 집합은 선택기와 선언 블록으로 구성됩니다.</p>
+  <p><img src="selector.gif" alt="selector"></p>
+
+  <hr>
+  <p>ex)</p>
+  <pre>
+    p {
+      color: red;
+      text-align: center;
+    }
+  </pre>
+  <hr>
+
+  <h2>CSS 셀렉터</h2>
+  <p>CSS 선택기는 HTML 요소를 요소 이름, ID, 클래스, 특성 등에 따라 찾거나 선택하는데 사용됩니다.</p>
+  <hr>
+
+  <h2>요소 선택기</h2>
+  <p>요소 선택기는 요소 이름을 기반으로 요소를 선택합니다.</p>
+  <pre>
+    p {
+      color: red;
+      text-align: center;
+    }
+  </pre>
+  <p>다음과 같이 페이지의 모든 p 요소를 선택해서 스타일을 지정할 수 있습니다.</p>
+
+
+  <hr>
+
+  <h2>id 셀렉터</h2>
+  <p>id selector는 HMTL 요소의 id 속성을 사용하여 특정 요소를 선택합니다.</p>
+  <p>요소의 id는 페이지 내에서 고유해야 하므로 id selector는 하나의 고유한 요소를 선택하는데 사용됩니다.</p>
+  <p>특정 ID가 있는 요소를 선택하려면 해시(#) 문자 다음에 요소의 ID를 씁니다.</p>
+  <p>아래 스타일 규칙은 id = "para1"인 HTML 요소에 적용됩니다.</p>
+  
+  <pre>
+    #para1 {
+      text-align: center;
+      color: red;
+    }
+  </pre>
+  <p class="back">Tip: ID 이름은 숫자로 시작할 수 없습니다.</p>
+  <hr>
+
+  <h2>Selector 클래스</h2>
+  <p>클래스 선택기는 특정 클래스 속성이 있는 요소를 선택합니다.</p>
+  <p>특정 클래스가 있는 요소를 선택하려면 마침표 (.) 문자 다음에 클래스 이름을 씁니다.</p>
+  <p>아래 예제에서 class ="center" 인 모든 HTML 요소는 빨간색으로 중앙 정렬 됩니다.</p>
+  <pre>
+    .center {
+      text-align: center;
+      color: red;
+    }
+  </pre>
+  <hr>
+  <p>특정 HTMl 요소만 클래스의 영향을 받도록 지정할 수도 있습니다.</p>
+  <p>아래 예제에서는 class="center"인 < p > 요소만 가운데 정렬됩니다.</p>
+  <pre>
+    p.center {
+      text-align:center;
+      color: red;
+    }
+  </pre>
+  <hr>
+  <p>HTML 요소는 둘 이상의 클래스를 참조 할 수도 있습니다.</p>
+  <p>아래 예제에서 < p > 요소는 class = "center" 및 class = "large"에 따라 스타일이 지정됩니다.</p>
+  <pre>
+    < p class="center large"> This is paragraph refers to two classes. < /p >
+  </pre>
+
+  <p class="back">Note: 클래스 이름은 숫자로 시작할 수 없습니다.</p>
+  <hr>
+
+  <h2>그룹화 선택기</h2>
+  <p>다음과 같이 같은 스타일 정의가 있는 요소가 있는 경우</p>
+  <pre>
+    h1 {
+      text-align:center;
+      color:red;
+    }
+    h2 {
+      text-align:center;
+      color:red;
+    }
+    p {
+      text-align:center;
+      color:red;
+    }
+  </pre>
+  <p>코드를 최소하 하기 위해 선택기를 그룹화 하는것이 좋습니다.</p>
+  <p>선택기를 그룹화 하려면 각 선택기를 쉼표로 구분하십시오.</p>
+  <p>아래 예제에서 위 코드의 선택기를 그룹화 했습니다.</p>
+  <pre>
+    h1, h2, p {
+      text-align: center;
+      color: red;
+    }
+  </pre>
+</body>
+</html>
