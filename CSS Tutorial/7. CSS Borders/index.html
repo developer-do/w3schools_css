@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+</head>
+<body>
+  <h1>CSS Borders</h1>
+  <hr>
+
+  <h2>CSS 테두리 속성</h2>
+  <p>CSS border속성을 사용하면 요소 테두리의 스타일, 너비  및 색상을 지정할 수 있습니다.</p>
+
+  <hr>
+
+  <h2>테두리 스타일</h2>
+  <p>이 border-style 속성은 어떤 종류의 테두리를 표시할 지 지정합니다.</p>
+  <p>허용되는 값은 다음과 같습니다.</p>
+
+  <ul>
+    <li>dotted - 점선 테두리를 정의합니다.</li>
+    <li>dashed - 점선 테두리를 정의합니다.</li>
+    <li>solid - 단색 테두리를 정의합니다.</li>
+    <li>double - 이중 테두리를 정의합니다.</li>
+    <li>groove - 3D 그루브 경계를 정의합니다. 효과는 테두리 색 값에 따라 다릅니다.</li>
+    <li>ridge - 3D 융기 테두리를 정의합니다. 효과는 테두리 색 값에 따라 다릅니다.</li>
+    <li>inset - 3D 삽입 테두리를 정의합니다. 효과는 테두리 색 값에 따라 다릅니다.</li>
+    <li>outset - 3D 시작 테두리를 정의합니다. 효과는 테두리 색 값에 따라 다릅니다.</li>
+    <li>none - 테두리 없음을 정의합니다.</li>
+    <li>hidden - 숨겨진 테두리를 정의합니다.</li>
+  </ul>
+
+  <p>border-style 속성은 1 ~ 4 개의 값에서 할수있다.</p>
+  <p class="yellow">Note: 아래에 설명된 기타 CSS테두리 속성은 해당 border-style 속성이 설정되어 있지 않으면 아무런 효과가 없습니다.</p>
+  <pre>
+      p.dotted {border-style: dotted;}
+      p.dashed {border-style: dashed;}
+      p.solid {border-style: solid;}
+      p.double {border-style: double;}
+      p.groove {border-style: groove;}
+      p.ridge {border-style: ridge;}
+      p.inset {border-style: inset;}
+      p.outset {border-style: outset;}
+      p.none {border-style: none;}
+      p.hidden {border-style: hidden;}
+      p.mix {border-style: dotted dashed solid double;}
+  </pre>
+  <hr>
+
+  <h2>테두리 너비</h2>
+  <p>이 border-width 속성은 네개의 테두리의 너비를 지정합니다.</p>
+  <p>너비는 특정 크기 (px, pt, cm, em 등) 또는 미리 정의 된 세가지 값 중 하나인 thin, medium 또는 thick 중 하나를 사용하여 설정 할 수 있습니다.</p>
+  
+  <pre>
+
+      p.one {
+        border-style: solid;
+        border-width: 5px;
+      }
+      
+      p.two {
+        border-style: solid;
+        border-width: medium;
+      }
+      
+      p.three {
+        border-style: solid;
+        border-width: 2px 10px 4px 20px;
+      }
+  </pre>
+
+  <hr>
+
+  <h2>테두리 색</h2>
+
+  <p>이 border-color 속성은 네게의 테두리 색상을 설정하는데 사용된다.</p>
+  <p>색상은 color name || 16진수 || RGB 값 이 세개중 하나를 사용할 수 있음</p>
+  <pre>
+      p.one {
+        border-style: solid;
+        border-color: red;
+      }
+      
+      p.two {
+        border-style: solid;
+        border-color: green;
+      }
+      
+      p.three {
+        border-style: solid;
+        border-color: red green blue yellow;
+      }
+  </pre>
+  <hr>
+
+  <h2>테두리 - 개별면</h2>
+  <p>위의 예제를 통해 각면에 다른 테두리를 지정할 수 있음을 알았습니다.</p>
+  <p>CSS에는 각 테두리 (top, right, bottom, left)를 지정하는 속성도 있습니다.</p>
+  <pre>
+      p {
+        border-top-style: dotted;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
+      }
+  </pre>
+  <p>위의 예는 다음과 같은 결과를 제공합니다.</p>
+  <pre>
+    p {
+      border-style: dotted solid;
+    }
+  </pre>
+
+  <hr>
+
+  <h2>테두리 - 속기 속성</h2>
+  <p>위의 예제에서 볼 수 있듯이 테두리를 처리할 때 고려해야할 많은 속성이 있습니다.</p>
+  <p>코드를 단축하기 위해 하나의 속성에 모든 개별 테두리 속성을 지정할 수도 있습니다.</p>
+  <p>이 border 속성은 다음과 같은 개별 테두리 속성에 대한 속기 속성 입니다.</p>
+  <ul>
+    <li>border-width</li>
+    <li>border-style(필수)</li>
+    <li>border-color</li>
+  </ul>
+
+  <pre>
+    p {
+      border: 1px solid #fff;
+    }
+  </pre>
+
+  <hr>
+
+  <h2>둥근 테두리</h2>
+  <p>이 border-radius 속성은 둥근 테두리를 요소에 추가하는데 사용됩니다.</p>
+  <pre>
+    border: 1px solid red;
+    border-radius: 5px;
+  </pre>
+
+  <p class="red">Note: 이 border-radius 속성은 IE8 및 이전 버전에서 지원되지 않습니다.</p>
+</body>
+</html>
