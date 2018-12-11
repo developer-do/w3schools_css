@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  
+</head>
+<body>
+  <h1>CSS How To...</h1>
+  <hr>
+
+  <h2>CSS를 삽입하는 3가지 방법</h2>
+  <ul class="green">
+    <li>외부 스타일 시트</li>
+    <li>내부 스타일 시트</li>
+    <li>인라인 스타일</li>
+  </ul>
+  <hr>
+
+  <h2>외부 스타일 시트</h2>
+  <p>외부 스타일시트를 사용하면 하나의 파일만 변경하여 전체 웹사이트의 모양을 변경할 수 있습니다.</p>
+  <p>head 태그 안에 link로 외부 스타일 시트 파일에 대한 참조를 포함해야합니다.</p>
+
+  <hr>
+  <p>ex)</p>
+  <pre>
+    head
+      < link rel="stylesheet" href="mystyle.css" >
+    head
+  </pre>
+  <p>외부 스타일 시트는텍스트 편집기로 작성할 수 있습니다.</p>
+  <p>파일에 html 태그가 없어야 합니다. 스타일 시트 파일은 .css 확장자로 저장해야합니다.</p>
+  <hr>
+  <p class="red">참고: 속성값과 단위(예 : margin-left 20 px;) 사이에 공백을 추가하지 마십시오. 올바른 방법은 margin-left: 20px; 입니다.</p>
+
+  <hr>
+  <h2>내부 스타일 시트</h2>
+  <p>한 페이지에 고유한 스타일이 있으면 내부 스타일 시트를 사용할 수 있습니다.</p>
+  <p>내부 스타일은 head 태그 안에 style요소를 정의하여 그 안에 css를 기입합니다.</p>
+
+  <pre>
+    head
+    style
+    body {
+      background-color: linen;
+    }
+    h1 {
+      color: maroon;
+      margin-left: 40px;
+    }
+    style
+    head
+  </pre>
+
+  <hr>
+
+  <h2>인라인 스타일</h2>
+  <p>인라인 스타일은 단일요소에 고유한 스타일을 적용하는 데 사용될 수 있다.</p>
+  <p>인사인 스타일을 사용하려면 관련 요소에 스타일 속성을 추가해야한다.</p>
+  <p>< p style="color: blue; margin-left: 30px;">This is a heading< /p ></p>
+  <p class="yellow">Tip: 인라인 스타일은 스타일 시트의 많은 장점을 상실한다. 이 방법은 절제하길 바란다.</p>
+  <hr>
+
+  <h2>다중 스타일 시트</h2>
+  <p>다른스타일 시트의 동일한 선택기 (요소)에 대해 일부속성이 정의된 경우 마지막으로 읽은 스타일 시트의 값이 사용된다.</p>
+  <pre>
+    h1 {
+      color: navy;
+    }
+
+    h1 {
+      color: red;  <= 아래의 스타일이 적용됨
+    }
+  </pre>
+  <p>또한 링크가 어디 위치에 있느냐에 따라서 우선순위가 바뀐다.</p>
+
+  <hr>
+
+  <h2>계단식 주문</h2>
+  <p>HTML 요소에 둘 이상의 스타일이 지정된 경우 어떤 스타일이 사용됩니까?</p>
+  <br/>
+  <p>페이지의 모든 스타일은 다음 규칙에 따라 새로운 "가상" 스타일 시트로 "계단식"이 됩니다. 여기서 번호 1은 우선순위가 가장 높습니다.</p>
+
+  <ol>
+    <li>인라인 스타일 (HTML 요소 내부)</li>
+    <li>외부 및 내부 스타일 시트(헤드 섹션에 있음)</li>
+    <li>브라우저 기본값</li>
+  </ol>
+
+  <p>따라서 인라인 스타일이 가장 우선순위가 높으며 외부 및 내부 스타일과 브라우저 기본값을 재정의합니다.</p>
+</body> 
+</html>
