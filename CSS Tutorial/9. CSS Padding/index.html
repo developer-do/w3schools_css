@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Padding</h1>
+  <hr>
+  <h2>CSS 패딩</h2>
+  <p>CSS padding 속성은 정의 된 테두리 안에 요소 내용 주위에 공간을 생성하는 데 사용됩니다.</p>
+  <p>이 padding속성은 다음과 같은 개별 패딩 속성에 대한 속기 속성이다.</p>
+  <ul>
+    <li>padding-top</li>
+    <li>padding-right</li>
+    <li>padding-bottom</li>
+    <li>padding-left</li>
+  </ul>
+  <pre>
+    p {
+      padding: top right bottom left;
+    }
+  </pre>
+
+  <hr>
+  <h2>패딩 및 요소 너비</h2>
+  <p>CSS width 속성은 요소의 내용 영역의 너비를 지정합니다. 내용 영역은 요소의 여백, 테두리 및 여백 안의 부분입니다.</p>
+  <p>따라서 요소에 지정된 너비가 있으면 해당 요소에 추가 된 채우기가 요소의 전체 너비에 추가됩니다. 이것은 종종 바람직 하지 않은 결과를 초례합니다.</p>
+  <p>다음 코드에서 div의 요소 폭은 300px 입니다. 그러나 div요소의 실제 렌더링 된 너비는 350px 입니다.</p>
+  <pre>
+    div {
+      width: 300px;
+      padding: 25px;
+    }
+  </pre>
+  <p>너비를 300px 로 유지하려면 여백에 관계없이 이 box-sizing 속성을 사용할 수 있습니다.</p>
+  <p>이것에 의해, 요소는 그 폭을 유지합니다. 패딩을 늘리면 사용 가능한 컨텐츠 공간이 줄어듭니다.</p>
+  <pre>
+    div {
+      width: 300px;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+  </pre>
+</body>
+</html>
