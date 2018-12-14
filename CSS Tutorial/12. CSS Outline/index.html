@@ -23,5 +23,67 @@
     <li>outline-offset</li>
     <li>outline</li>
   </ul>
+  <p class="yellow">Tip: outline은 border와 다릅니다. 테두리와는 달리, outline은 요소의 border 외부로 그려지며 다른 내용과 겹칠 수 있습니다.</p>
+  <p class="yellow">또한 outline은 치수의 일부가 아니다. outline의 전체 폭과 높이는 외곽선 너비의 영향을 받지 않는다.</p>
+
+  <hr>
+  <h2>outline style</h2>
+  <p>이 outline-style 속성은 개요의 스타일을 지정하며 다음 값 중 하나를 가질 수 있습니다.</p>
+  <ul>
+    <li>dotted - 점선으로 된 윤곽을 정의합니다.</li>
+    <li>dashed - 파선 테두리를 정의합니다.</li>
+    <li>solid - 단색 테두리를 정의합니다.</li>
+    <li>double - 이중 윤곽을 정의합니다.</li>
+    <li>groove - 3D 그루브 아웃 라인을 정의합니다.</li>
+    <li>ridge - 3D ridged outline을 정의합니다.</li>
+    <li>inset - 3D 인세 트 개요 정의</li>
+    <li>outset - 3D 시작 개요 정의</li>
+    <li>none - 윤곽을 정의하지 않습니다.</li>
+    <li>hidden - 숨겨진 개요 정의</li>
+  </ul>
+  <p class="yellow">Tip: outline-style 속성이 설정되지 않은 한 다른 outline속성은 아무런 영향을 미치지 않습니다.</p>
+  <hr>
+
+  <h2>윤곽선 색</h2>
+  <p>이 outline-color 속성은 외곽선의 색상을 설정하는 데 사용됩니다.</p>
+  <p>색상은</p>
+  <ul>
+    <li>name - "red"와 같은 색상이름 사용가능</li>
+    <li>RGB - RGB 값을 지정한다. rgb(0,0,0)</li>
+    <li>16진수 - 16진수와 같이 지정 가능. #ffff00</li>
+    <li>invert - 색상 반전을 수행합니다. (색상 배경에 관계없이 외곽선을 볼 수 있음)</li>
+  </ul>
+
+  <hr>
+
+  <h2>outline width</h2>
+  <p>이 outline-width 속성은 외곽선의 너비를 지정하며 다음 값 중 하나를 가질 수 있습니다.</p>
+  <ul>
+    <li>얇은 (일반적으로 1px)</li>
+    <li>중간 (일반적으로 3px)</li>
+    <li>두꺼운 (일반적으로 5px)</li>
+    <li>특정 크기 (px, pt, cm, em 등)</li>
+  </ul>
+
+  <hr>
+
+
+  <h2>outline - 속기 속성</h2>
+  <p>이 outline 속성은 다음과 같은 개별 개요 속성을 설정하기 위한 속기 속성입니다.</p>
+  <ul>
+    <li>outline-width</li>
+    <li>outline-style(필수)</li>
+    <li>outline-color</li>
+  </ul>
+  <p class="red">꿀 Tip: 이 outline 속성에 속기 속성을 사용할 때 순서가 필요 없습니다.</p>
+
+  <hr>
+
+  <h2>outline offset</h2>
+  <p>이 outline-offset 속성은 외곽선과 요소의 가장자리 / 경계 사이에 공백을 추가합니다. 요소와 그 윤곽선 사이의 공간은 투명합니다.</p>
+  <p>다음 예제는 테두리 가장자리 외부의 윤곽선을 15px로 지정한겁니다.</p>
+  <p style="margin: 30px; border: 1px solid black; outline: 1px solid red; outline-offset: 15px;">이 단락의 윤곽선은 테두리 가장자리 외부의 15px 입니다.</p>
+  <p>다음 예제는 요소와 outline 사이의 공간이 투명함을 보여줍니다.</p>
+  <p style="margin: 30px; border: 1px solid black; outline: 1px solid red; outline-offset: 15px; background-color: yellow;">이 단락의 윤곽선은 테두리 가장자리 외부의 15px 입니다.</p>
 </body>
 </html>
