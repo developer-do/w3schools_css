@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+  <style>
+    .green span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model</h1>
+  <hr>
+  <h2>The CSS Box Model</h2>
+  <p>모든 HTML 요소는 상자로 간주 할 수 있습니다. CSS에서는 디자인과 레이아웃에 대해 "Box Model" 이라는 용어를 사용합니다.</p>
+  <p>CSS 상자 모델은 본질적으로 모든 HTML요소를 감싸는 상자입니다.</p>
+  <p>margin, border, padding, content로 구성 되어있습니다.</p>
+
+  <ul>
+    <li>content - 텍스트 및 이미지가 나타나는 상자 내용</li>
+    <li>padding - content 주위의 영역과 border 사이의 공간을 차지합니다. 패딩은 투명합니다.</li>
+    <li>border - padding 및 content의 주위를 둘러 쌀 테두리</li>
+    <li>margin - border 바깥 영역을 차지합니다.</li>
+  </ul>
+  <p>box model을 사용하면 요소 주위에 border를 추가하고 content 사이에 공백을 정의 할 수 있습니다.</p>
+  <pre>
+    div {
+      width: 300px;
+      border: 25px solid green;
+      padding: 25px;
+      margin: 25px;
+    }
+  </pre>
+
+  <hr>
+  <h2>요소의 너비와 높이</h2>
+  <p>모든 브라우저에서 요소의 너비와 높이를 올바르게 설정하려면 상자 모델의 작동 방식을 알아야합니다.</p>
+  <p class="yellow">중요!: CSS를 사용하여 요소의 너비 및 높이 속성을 설정하면 내용 영역의 너비와 높이를 설정하기만 하면 됩니다. 요소의 전체 크기를 계산하려면 패딩, 테두리 및 여백도 추가해야 합니다.</p>
+  <p>총 너비가 350px이 되도록 div 요소 스타일을 지정한다고 가정하면</p>
+  <pre>
+    div {
+      width: 320px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+    }
+  </pre>
+  <p>계산은 다음과 같습니다.</p>
+  <p class="green">
+    <span>320px (width)</span>
+    <span>+ 20px (왼쪽 + 오른쪽 padding)</span>
+    <span>+ 10px (왼쪽 + 오른쪽 border)</span>
+    <span>+ 0px (왼쪽 + 오른쪽 margin)</span>
+  </p>
+  <p>요소의 full width는 다음과 같이 계산되어야 합니다.</p>
+  <p>full content width = width + margin-left + padding-left + border-left + border-right + padding-right + margin-right</p>
+  <p>요소의 full height는 다음과 같이 계산되어야 합니다.</p>
+  <p>full content height = width + margin-top + padding-top + border-top + border-bottom + padding-bottom + margin-bottom</p>
+</body>
+</html>
