@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS 텍스트</h1>
+  <hr>
+
+  <h2>텍스트 색상</h2>
+  <p>text 색상은 color 속성으로 설정할 수 있습니다.</p>
+  <p class="yellow">W3C 호환 CSS : 색상 속성을 정의할 경우 배경색도 정의해야 한다.</p>
+  <hr>
+
+  <h2>텍스트 정렬</h2>
+  <p>이 text-align 속성은 텍스트의 가로 맞춤을 설정하는 데 사용됩니다.</p>
+  <p>텍스트는 왼쪽 또는 오른쪽 정렬, 가운데 맞춤 또는 양쪽 맞춤이 가능합니다.</p>
+  <p>다음 예제에서는 가운데 정렬 및 왼쪽 및 오른쪽 정렬 텍스트를 보여줍니다.</p>
+
+  <pre>
+    h1{
+      text-align: center;
+    }
+    h2 {
+      text-align: left;
+    }
+    h3 {
+      text-align: right;
+    }
+  </pre>
+  <p>text-align 속성이 "양쪽 맞춤"으로 설정되면 모든 선의 폭이 동일하고 왼쪽 및 오른쪽 여백이 직선형이 되도록 각 선이 늘어납니다. (예: 잡지 신문)</p>
+  <pre>
+    div {
+      text-align: justify;
+    }
+  </pre>
+
+  <hr>
+
+  <h2>텍스트 장식</h2>
+  <p>이 text-decoration 속성은 텍스트에서 장식을 설정하거나 제거하느 데 사용됩니다.</p>
+  <p>이 text-decoration: none;은 종종 링크에서 밑줄을 제거하는 데 사용됩니다</p>
+  <pre>
+    a {
+      text-decoration: none;
+    }
+  </pre>
+  <p>다른 text-decoration 값은 텍스트를 장식하는 데 사용됩니다.</p>
+  <pre>
+    h1 {
+      text-decoration: overline;
+    }
+    h2 {
+      text-decoration: line-through;
+    }
+    h3 {
+      text-decoration: underline;
+    }
+  </pre>
+  <p class="yellow">Tip: 링크가 아닌 텍스트에 밑줄을 긋는 것은 독자에게 혼동을 주기 때문에 링크 텍스트가 아닌 텍스트에 밑줄을 권장하지 않습니다.</p>
+  <hr>
+
+  <h2>텍스트 변환</h2>
+  <p>이 text-transform 속성은 텍스트에서 대문자와 소문자를 지정하는 데 사용됩니다.</p>
+  <p>모든것을 대문자 또는 소문자로 바꾸거나 각 단어의 첫 글자를 대문자로 사용할 수도 있습니다.</p>
+  <pre>
+    p.uppercase {
+      text-transform: uppercase;
+    }
+    p.lowercase {
+      text-transform: lowercase;
+    }
+    p.capitalize {
+      text-transform: capitalize;
+    }
+  </pre>
+  <hr>
+
+  <h2>텍스트 들여쓰기</h2>
+  <p>이 text-indent속성은 텍스트의 첫 번째 줄에 들여쓰기를 지정하는데 사용됩니다.</p>
+  <p style="text-indent: 50px;">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+  <pre>
+    p {
+      text-indent: 50px;
+    }
+  </pre>
+  <hr>
+
+  <h2>문자 간격</h2>
+  <p>이 letter-spacing 속성은 텍스트의 문자 사이 간격을 지정하는데 사용됩니다.</p>
+  <p>다음 예제에서는 문자 사이의 간격을 늘리거나 줄이는 방법을 보여줍니다.</p>
+  <h1 style="letter-spacing: 3px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sit assumenda iure velit soluta dolorum nemo blanditiis quidem amet corrupti est eius architecto magnam, voluptates aut eaque adipisci quod. Inventore.</h1>
+  <h1 style="letter-spacing: -3px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</h1>
+  <pre>
+    h1 {
+      letter-spacing: 3px;
+    }
+    h2 {
+      letter-spacing: -3px;
+    }
+  </pre>
+  <hr>
+
+  <h2>라인 높이</h2>
+  <p>이 line-height 속성은 줄 사이의 간격을 지정하는 데 사용됩니다.</p>
+  <p style="line-height: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</p>
+  <p style="line-height: 1.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</p>
+  <pre>
+    p {
+      line-height: 0.8;
+    }
+    p {
+      line-height: 1.8;
+    }
+  </pre>
+  <hr>
+
+  <h2>텍스트 방향</h2>
+  <p>이 direction 속성은 요소의 텍스트 방향을 변경하는 데 사용됩니다.</p>
+  <p style="direction: rtl;">This is the default text direction.</p>
+  <pre>
+    p {
+      direction: rtl;
+    }
+  </pre>
+  <hr>
+
+  <h2>단어 간격</h2>
+  <p>이 word-spacing 속성은 텍스트의 단어 사이의 공백을 지정하는데 사용됩니다.</p>
+  <p>다음 예제에서는 단어 사이의 간격을 늘리거나 줄이는방법을 보여줍니다.</p>
+  <p style="word-spacing: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</p>
+  <p style="word-spacing: -5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</p>
+  <pre>
+    p {
+      word-spacing: 10px;
+    }
+    p {
+      word-spacing: -5px;
+    }
+  </pre>
+  <hr>
+
+  <h2>텍스트 그림자</h2>
+  <p>text-shadow속성은 텍스트에 그림자를 추가합니다.</p>
+  <p>다음 예제는 수평 그림자 (3px), 수직 그림자 (2px) 위치 및 그림자 색상 (빨간색)의 위치를 지정합니다.</p>
+  <p style="text-shadow: 3px 2px red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur labore neque, quis enim voluptatem et necessitatibus quae beatae dicta nulla, perspiciatis facilis harum, maxime iure eaque sed libero dignissimos!</p>
+  <pre>
+    h1 {
+      text-shadow: 3px 2px red;
+    }
+  </pre>
+</body>
+</html>
