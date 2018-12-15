@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Links</h1>
+  <hr>
+
+  <p>CSS 를 사용하면 링크를 다른 방식으로 스타일을 지정할 수 있습니다.</p>
+  <hr>
+
+  <h2>link style</h2>
+  <p>링크는 어떤 CSS 속성이든 정할 수 있습니다.</p>
+  <pre>
+    a {
+      color: hotpink;
+    }
+  </pre>
+  <p>또한 링크의 상태에 따라 다르게 스타일을 지정할 수 있습니다.</p>
+  <ul class="green">
+    <li>a:link - 방문하지 않은 링크</li>
+    <li>a:visited - 사용자가 방문한 링크</li>
+    <li>a:hover - 사용자가 마우스를 올려놓을때의 링크</li>
+    <li>a:active - 클릭 한 순간의 링크</li>
+  </ul>
+  <p class="red">여러 링크 상태에 대한 스타일을 설정할 때 몇가지 순서 규칙이 있습니다.</p>
+  <p class="red">1. a:hover는 a:link 와 a:visited 뒤에 와야합니다.</p>
+  <p class="red">2. a:active는 반드시 a:hover 다음에 와야합니다.</p>
+  <hr>
+
+  <h2>text decoration</h2>
+  <p>이 text-decoration 속성은 주로 링크에서 밑줄을 제거하는 데 사용됩니다.</p>
+  <hr>
+
+  <h2>text background</h2>
+  <p>이 background-color 속성은 링크의 배경색을 지정할 수 있습니다.</p>
+  <hr>
+
+  <h2>고급 - link button</h2>
+  <p>이 예제는 몇가지 CSS 속성을 결합하여 링크를 상자 / 버튼으로 표시하는 고급 예제를 보여줍니다.</p>
+  <pre>
+    a:link, a:visited {
+      background-color: #f44336;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover, a:active {
+      background-color: red;
+    }
+  </pre>
+</body>
+</html>
