@@ -1,0 +1,52 @@
+span.a {
+  display: inline; /* the default for span */
+  /* width: 100px;
+  height: 100px; */
+  padding: 5px;
+  border: 1px solid blue; 
+  background-color: yellow; 
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue; 
+  background-color: yellow; 
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue; 
+  background-color: yellow; 
+}
+
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border:0;
+  outline: none;
+}
+* {
+  box-sizing: border-box;
+}
+ul {
+  width: 100%;
+  background-color: yellow;
+}
+li {
+  display: inline-block;
+  width: 24.6%;
+  padding: 20px;
+  text-align: center;
+}
+a {
+  width: 100%;
+  
+}

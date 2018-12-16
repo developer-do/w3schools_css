@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Layout - display: inline-block</h1>
+  <hr>
+
+  <h2>display: inline-block 값</h2>
+  <p>display: inline에 비해 display: inline-block 는 요소의 너비와 높이를 설정할 수 있다는 점이 주요 차이점 입니다.</p>
+  <p>또한 display:inline-block는 top/bottom padding margin이 존중되지만 display: inline는 그렇지 않습니다.</p>
+  <p>display: block와 비교해보면 주요 차이점은 display: inline-block 요소 다음에 줄 바꿈을 추가하지 않음으로 요소가 다른 요소 옆에 놓일 수 있다는 점 입니다.</p>
+  <span class="a">a</span>
+  <span class="b">b</span>
+  <span class="c">c</span>
+  <pre>
+    span.a {
+      display: inline; /* the default for span */
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid blue; 
+      background-color: yellow; 
+    }
+
+    span.b {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid blue; 
+      background-color: yellow; 
+    }
+
+    span.c {
+      display: block;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid blue; 
+      background-color: yellow; 
+    }
+  </pre>
+  <hr>
+
+  <h2>인라인 블록을 사용하여 탐색 링크 만들기</h2>
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">about us</a></li>
+    <li><a href="#">our clients</a></li>
+    <li><a href="#">contact us</a></li>
+  </ul>
+</body>
+</html>
