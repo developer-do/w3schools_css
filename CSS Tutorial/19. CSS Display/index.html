@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Layout - The display Property</h1>
+  <hr>
+  
+  <p>이 display 속성은 레이아웃을 제어하는 가장 중요한 CSS 속성입니다.</p>
+  <hr>
+
+  <h2>display 속성</h2>
+  <p>이 display 속성은 요소가 표시되는지 여부를 지정합니다.</p>
+  <p>모든 HTML요소는 요소 유형에 따라 기본 표시 값을 가집니다. 대부분의 요소에 대한 기본표시 값은 block || inline 입니다.</p>
+  <hr>
+
+  <h2>block 요소</h2>
+  <p>block 요소는 항상 새줄에서 시작하여 사용할 수 있는 전체 너비를 사용합니다.(가능한 한 왼쪽 및 오른쪽으로 뻗어 있음)</p>
+  <div style="border: 3px solid #4CAF50">div 요소는 block 요소입니다.</div>
+  <hr>
+  
+  <h2>inline 요소</h2>
+  <p>인라인 요소는 새 줄에서 시작하지 않고 필요한 만큼만 너비를 차지합니다.</p>
+  <p>이것은 단락 <span style="border: 3px solid #4CAF50">안에</span> 있는 <span style="border: 3px solid #4CAF50">인라인 span 요소</span>입니다.</p>
+  <hr>
+
+  <h2>display:none;</h2>
+  <p>display: none;은 요소를 숨기거나 다시 만들지 않고 요소를 숨긱거나 표시하기 위해 일반적으로 javascript와 함께 사용됩니다.</p>
+  <hr>
+
+  <h2>기본 표시값 무시</h2>
+  <p>언급한 바와 같이 모든요소에는 기본 표시값이 있습니다. 그러나 이것을 무시할 수 있습니다.</p>
+  <p>인라인 요소를 블록요소로 변경하거나 그 반대로 변경하면 페이지를 특정 방식으로 보이게 하고 웹 표준을 계속 따르는 데 유용할 수 있습니다.</p>
+  <p>일반적인 예는 li요소를 인라인 요소로 만드는 것입니다.</p>
+  <pre>
+    li {
+      display: inline;
+    }
+  </pre>
+  <p class="yellow">참고: 요소의 표시 속성을 설정하면 요소의 유형만 변경되며 요소의 종류는 변경되지 않습니다. 따라서 인라인 요소 display: block;은 내부에 다른 블록 요소를 포함 할 수 없습니다.</p>
+  <pre>
+    span {
+      display: block;
+    }
+    a {
+      display: block;
+    }
+  </pre>
+  <hr>
+
+  <h2>요소 - 표시 안됨 || 표시 여부 : 숨김?</h2>
+  <p>display: none; 속성을 설정하면 요소를 숨길 수 있습니다. 요소가 숨겨지고 요소가 없는 것처럼 페이지가 표시됩니다.</p>
+  <pre>
+    h1.hidden {
+      display: none;
+    }
+  </pre>
+  <p>visibility: hidden; 또한 요소를 숨깁니다.</p>
+  <p>그러나 이 속성은 display: none과 다르게 공간을 차지합니다. 요소는 숨겨지지만 여전히 레이아웃에 영향을 줍니다.</p>
+  <pre>
+    h1.hidden {
+      visibility: hidden;
+    }
+  </pre>
+</body>
+</html>
