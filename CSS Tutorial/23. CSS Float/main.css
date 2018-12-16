@@ -1,0 +1,40 @@
+.box {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  float: left;
+  padding: 50px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.box_wrap div {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.box_wrap div img {
+  width: 100%;
+}
+
+.list {
+  overflow: hidden;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  float: left;
+  list-style: none;
+}
+
+.list li a {
+  text-decoration: none;
+  color: #fff;
+  display: block; 
+  padding: 12px;
+}
+
+.list li a.active {
+  background-color: red;
+}

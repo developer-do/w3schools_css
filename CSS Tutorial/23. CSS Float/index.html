@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Layout - float and clear</h1>
+  <hr>
+
+  <p>CSS float 속성은 요소가 어떻게 떠 다니는지를 지정합니다.</p>
+  <p>CSS clear 속성은 지워진 요소 옆에 어떤 요소가 떠오르며 어떤면에 놓일 수 있는지 지정합니다.</p>
+  <hr>
+
+  <h2>float 속성</h2>
+  <p>이 float 속성은 내용의 위치 지정 및 형식 지정(예: 이미지를 컨테이너의 텍스트 왼쪽으로 띄우기)에 사용됩니다.</p>
+  <p>이 float 속성은 다음 값 중 하나를 가질 수 있습니다.</p>
+  <ul>
+    <li>left - element가 컨테이너의 왼쪽으로 위치됩니다.</li>
+    <li>right - element가 컨테이너의 오른쪽으로 위치합니다.</li>
+    <li>none - element가 float되지 않음 (텍스트에서 나타나는 바로 그 위치에 표시됨.) 기본값</li>
+    <li>inherit - element가 상위 요소의 float을 상속한다.</li>
+  </ul>
+  <hr>
+
+  <h2>예제 - float: right;</h2>
+  <p>다음 예제에서는 이미지가 텍스트의 오른쪽에 떠 있어야합니다.</p>
+  <p style="overflow: auto; border: 1px solid #d9d9d9; padding: 10px;">
+    <img src="pineapple.jpg" style="float: right; margin-right: 10px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+  </p>
+  <pre>
+    img {
+      float: right;
+    }
+  </pre>
+  <hr>
+
+  <h2>예제 - float: left;</h2>
+  <p>다음 예제에서는 이미지가 텍스트의 왼쪽에 떠 있어야합니다.</p>
+  <p style="overflow: auto; border: 1px solid #d9d9d9; padding: 10px;">
+    <img src="pineapple.jpg" style="float: left; margin-right: 10px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+  </p>
+  <pre>
+    img {
+      float: left;
+    }
+  </pre>
+  <hr>
+
+  <h2>예제 - float: none;</h2>
+  <p>다음 예제에서는 이미지가 텍스트의 왼쪽에 떠 있어야합니다.</p>
+  <p style="border: 1px solid #d9d9d9; padding: 10px;">
+    <img src="pineapple.jpg" style="float: none; margin-right: 10px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+  </p>
+  <pre>
+    img {
+      float: none;
+    }
+  </pre>
+  <hr>
+
+  <h2>clear 속성</h2>
+  <p>이 clear 속성은 지워진 요소 옆에 어떤 요소가 떠오르며 어떤면에 올 수 있는지 지정합니다.</p>
+  <p>이 clear 속성은 다음 값 중 하나를 가질 수 있습니다.</p>
+  <ul>
+    <li>none - 양쪽에 float 요소를 허용합니다. 기본값.</li>
+    <li>left - 왼쪽에 부동 요소가 허용되지 않음</li>
+    <li>right - 오른쪽에 부동 요소가 허용되지 않음</li>
+    <li>both - 왼쪽 또는 오른쪽에 부동 요소가 허용되지 않음</li>
+    <li>inherit - element은 부모의 명확한 값을 상속받습니다.</li>
+  </ul>
+  <p>이 clear 속성을 사용하는 가장 일반적인 방법은 요소에 float 속성을 사용한 후 입니다.</p>
+  <p>float을 제거할 때 float에 맞춰야 합니다. 요소가 왼쪽으로 떠오르면 왼쪽으로 clear하십시오.</p>
+  <p>float되 있는 element은 계속 떠있지만 지워진 element은 그 아래 웹페이지에 나타날 것입니다.</p>
+  <pre>
+    div {
+      clear: left;
+    }
+  </pre>
+  <hr>
+
+  <h2>clearfix 해킹</h2>
+  <p>element가 포함된 element보다 크고 float된 경우 해당 element가 컨테이너 외부에서 overflow 됩니다.</p>
+  <p>그런 다음 overflow: auto로 element를 포함하여야 이 문제를 해결할 수 있습니다.</p>
+  <pre>
+    .clearfix {
+      overflow: auto;
+    }
+    .clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </pre>
+  <hr>
+
+  <h2>Grid of Boxes / Equal Width Boxes</h2>
+  <div style="overflow: hidden;">
+    <div class="box">상자1</div>
+    <div class="box">상자2</div>
+    <div class="box">상자3</div>
+  </div>
+  
+  <p class="yellow">
+    box-sizing란 무었입니까 ?<br/>
+    세 개의 플로팅 상자를 나란히 쉽게 만들 수 있습니다. 그러나 각 상자의 너비를 확대하는 항목을 추가하면 상자가 끊깁니다. 이 box-sizing속성을사용하면 상자의 전체 너비에 채우기 및 테두리를 포함 할 수 있으며 상자 안쪽에 채우기가 유지되고 중단되지 않도록 할 수 있습니다.
+  </p>
+  <hr>
+
+  <h2>이미지 side by side</h2>
+  <p>상자 그리드를 사용하여 이미지를 나란히 표시할 수도 있습니다.</p>
+  <div class="box_wrap">
+    <div>
+      <img src="img_5terre.jpg" alt="">
+    </div>
+    <div>
+      <img src="img_forest.jpg" alt="">
+    </div>
+    <div>
+      <img src="img_mountains.jpg" alt="">
+    </div>
+  </div>
+  <hr>
+
+  <h2>같은 높이 box</h2>
+  <p>앞의 예제에서 상자를 동일한 너비로 ㅁ나란히 놓는 방법을 배웠습니다. 그러나 높이가 같은플로팅 상자를 만드는 것은쉽지 않습니다. 그러나 빠른 수정 방법은 아래 예와 같이 고정된 높이를 설정하는 것입니다.</p>
+  <pre>
+    .box {
+      height: 500px;
+    }
+  </pre>
+
+  <hr>
+
+  <h2>탭 메뉴</h2>
+  <p>float 사용해서 메뉴를 만들기</p>
+  <ul class="list">
+    <li><a class="active" href="#">집</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">접촉</a></li>
+    <li><a href="#">약</a></li>
+  </ul>
+  <hr>
+
+  <h2>웹 레이아웃 예제</h2>
+
+</body>
+</html>
