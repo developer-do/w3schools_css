@@ -1,0 +1,97 @@
+.tb, 
+.tb th, 
+.tb td {
+  border: 1px solid black;
+}
+
+/*                     */
+.two_table, 
+.two_table th, 
+.two_table td {
+  border: 1px solid black;
+}
+.two_table { 
+  border-collapse: collapse;
+}
+
+/*                      */
+.three_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.three_table,
+.three_table th,
+.three_table td {
+  border: 1px solid black;
+}
+.three_table th {
+  height: 50px;
+}
+/*                      */
+
+.four_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.four_table th {
+  text-align: left;
+}
+/* */
+
+.five_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.five_table td {
+  vertical-align: bottom;
+  height: 50px;
+}
+
+/* */
+.six_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.six_table th,
+.six_table td {
+  padding: 15px;
+  text-align: left;
+}
+
+/* */
+.seven_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.seven_table th,
+.seven_table td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+/* */
+.eight_table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* */
+.nine_table th,
+.nine_table td {
+  text-align: left;
+  border: none;
+  padding: 15px;
+}
+.nine_table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+/* */
+.ten_table th {
+  background-color: #4CAF50;
+  color: white;
+}
+.ten_table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
