@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1 style="font-size: 3em; color: green;">시작하기 전 내가 알고 있는 지식은 건너 뛰도록 하겟다.</h1>
+  <h1>CSS Layout - Horizontal & Vertical Align</h1>
+  <hr>
+
+  <h2>가운데 정렬 요소</h2>
+  <p class="yellow">핵심 - margin: auto;</p>
+  <p class="red">참고: width: 속성을 설정하지 않거나 || width: 100%이면 margin: auto는 효과가 없다.</p>
+  <hr>
+
+  <h2>가운데 맞춤 텍스트</h2>
+  <p class="yellow">핵심 - text-align;</p>
+  <hr>
+
+  <h2>이미지 센터</h2>
+  <p class="yellow">핵심 - display: block; 해주고 width가 100%가 아니고 설정이 되어있다면 margin: 0 auto; 해주면 된다. 아니면 text-align: center; 해주면 된다.</p>
+  <hr>
+
+  <h2>좌우 정렬 - 위치 사용</h2>
+  <p class="yellow">핵심 - position: absolute;를 줘서 right: 0; left: 0; 등 위치를 선정해주기</p>
+  <p class="red">절대 위치 요소는 정상흐름에서 제거되며 요소를 겹칠 수 있습니다.</p>
+  <hr>
+
+  <h2>왼쪽 및 오른쪽 정렬 - float 사용</h2>
+  <p class="yellow">핵심 - float: left; float: right; 로 위치 지정 가능</p>
+  <p class="red">참고: 요소가 포함 된 요소보다 크고 float되 있다면 container 외부로 넘칠 수 있다. 그럴때는 container에 overflow: auto; 또는 hidden 값을 정의해 주면 된다.</p>
+  <hr>
+
+  <h2>세로 중심 - 패딩 사용</h2>
+  <p class="yellow">핵심 - padding: 70px 0; 이렇게 위아래 패딩만 주면 위아래 정렬이 된다.</p>
+  
+  <hr>
+
+  <h2>세로 중심 - 선 높이 사용</h2>
+  <p class="yellow">핵심 - line-height 값을 정의해주면 된다.</p>
+  <hr>
+
+  <h2>세로 중심 - 위치 및 변형 사용</h2>
+  <p class="yellow">핵심 - position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%;</p>
+</body>
+</html>
