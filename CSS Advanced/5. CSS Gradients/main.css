@@ -1,0 +1,5 @@
+#grad { height: 200px; background-image: linear-gradient(red, yellow);}
+#grad1 {height: 200px; background-image: linear-gradient(to right, red, yellow);}
+#grad2 {height: 200px; background-image: linear-gradient(to bottom right, red, yellow); }
+#grad3 {height: 200px; background-image: linear-gradient(-90deg, red, yellow);}
+#grad4 {height: 200px; background-image: linear-gradient(red, yellow, green);}
