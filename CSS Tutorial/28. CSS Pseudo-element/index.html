@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Pseudo-elements</h1>
+  <hr>
+
+  <h2>CSS Pseudo-element란 무엇인가?</h2>
+  <p>CSS 가상 element는 element의 지정된 부분을 스타일 화 하는데 사용됩니다.</p>
+  <p>예를 들어 다음과 같이 사용할 수 있습니다.</p>
+  <ul>
+    <li>요소의 첫 번째 문자 또는 선 스타일 지정</li>
+    <li>요소의 내용 앞이나 뒤에 내용 삽입</li>
+  </ul>
+  <hr>
+
+  <h2>syntax</h2>
+  <p>문법</p>
+  <pre>
+    selector::pseudo-element {
+      property: value;
+    }
+  </pre>
+  <p class="yellow">
+    이중 콜론 표기법에 유의하십시오. - ::first-line vs :first-line
+    <br/><br/>
+    이중 콜론은 CSS3의 가상 요소에 대한 단일 클론 표기법을 대체했습니다. 이것은 가상 클래스와 가상 요소를 구별하기 위한 W3C의 시도였습니다.
+    <br/><br/>
+    단일 콜론 구문은 CSS2 및 CSS1의 가상 클래스 및 가상 요소에 모둔 사용되었습니다.
+    <br/><br/>
+    이전 버전과의 호환성을 위해 단일 콜론 구문은 CSS2 및 CSS1 가상 요소에 허용됩니다.
+  </p>
+  <hr>
+
+  <h2>::first-line 가상 요소</h2>
+  <p>::first-line 가상 요소는 텍스트의 첫번째 줄에 특별한 스타일을 추가하는 데 사용됩니다.</p>
+  <pre>
+    p::first-line {
+      color: #ff0000;
+      font-variant: small-caps;
+    }
+  </pre>
+  <p class="green">참고:  ::first-line 가상 요소는 block 요소에만 적용될 수 있습니다.</p>
+  <p>다음 속성이 ::first-line 의사 요소에 적용됩니다.</p>
+  <ul>
+    <li>font 속성</li>
+    <li>color 속성</li>
+    <li>background 속성</li>
+    <li>word-spacing 속성</li>
+    <li>letter-spacing 속성</li>
+    <li>text-decoration 속성</li>
+    <li>vertical-align 속성</li>
+    <li>text-transform 속성</li>
+    <li>line-height 속성</li>
+    <li>clear 속성</li>
+  </ul>
+  <hr>
+  
+  <h2>::first-letter 가상 요소</h2>
+  <p>::first-letter 가상 요소는 텍스트의 첫 글자에 특별한 스타일을 추가하는 데 사용됩니다.</p>
+  <pre>
+    p::first-letter {
+      color: #ff0000;
+      font-size: xx-large;
+    }
+  </pre>
+  <p class="green">참고:  ::frist-letter 가상 요소는 ::first-line 처럼 블록 요소에만 가능합니다.</p>
+  <p>다음 속성은 ::first-letter 가상 요소에 적용됩니다.</p>
+  <ul>
+    <li>font 속성</li>
+    <li>color 속성</li>
+    <li>background 속성</li>
+    <li>margin 속성</li>
+    <li>padding 속성</li>
+    <li>border 속성</li>
+    <li>text-decoration 속성</li>
+    <li>vertical-align 속성</li>
+    <li>text-transform 속성</li>
+    <li>line-height 속성</li>
+    <li>float 속성</li>
+    <li>clear 속성</li>
+  </ul>
+  <hr>
+
+  <h2>가상 요소와 css 클래스</h2>
+  <p>가상 요소는 css 클래스와 결합 할 수 있습니다.</p>
+  <pre>
+    p.intro::first-letter {
+      color: #ff0000;
+      font-size: 200%;
+    }
+  </pre>
+  <hr>
+
+  <h2>다중 가상 element</h2>
+  <p>여러개의 가상 요소를 결합 할 수도 있습니다.</p>
+  <pre>
+    p::first-letter {
+      color: #ff0000;
+      font-size: xx-large;
+    }
+    p::first-line {
+      color: #0000ff;
+      font-variant: small-caps;
+    }
+  </pre>
+  <hr>
+
+  <h2>CSS - ::before 가상 element</h2>
+  <p>::before 는 기존 element이전에 내용을 삽입 할 수 있습니다.</p>
+  <hr>
+
+  <h2>CSS - ::after 가상 element</h2>
+  <p>::after 는 기존 element이후에 내용을 삽입 할 수 있습니다.</p>
+  <hr>
+
+  <h2>CSS - ::selection 가상 elemnet</h2>
+  <p>::selection 는 사용자에 의해 선택되는 (드래그 되는) 부분이다.</p>
+  <p>다음 ::selection에는 color, background, cursor과 outline 들의 속성을 적용할 수 있다.</p>
+  <pre>
+    ::selection {
+      color: red;
+      background-color: yellow;
+    }
+  </pre>
+  <hr>
+
+
+</body>
+</html>
