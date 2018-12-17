@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Navigation bar</h1>
+  <hr>
+
+  <h2>네비게이션 모음</h2>
+  <p>사용하기 쉬운 네비게이션 기능은 모든 웹 사이트에서 중요합니다.</p>
+  <p>CSS를 사용하면 지루한 HTML 메뉴를 멋진 탐색 모음으로 변형 할 수 있습니다.</p>
+  <hr>
+
+  <h2>네비게이션 모음 = 링크 목록</h2>
+  <p>탐색 모음에는 표준 HTML이 기본으로 필요합니다.</p>
+  <p>예제에서는 표준HTML 목록에서 네비게이션 모음을 작성합니다.</p>
+  <p>네비게이션 바는 기본적으로 링크 목록이므로 ul li 요소를 사용하면 완벽하게 이해할 수 있습니다.</p>
+  <pre>
+    < ul >
+      < li >< a href="default.asp">Home< /a ></ li >
+      < li >< a href="news.asp">News< /a ></ li >
+      < li >< a href="contact.asp">Contact< /a ></ li >
+      < li >< a href="about.asp">About< /a ></ li >
+    < /ul >
+  </pre>
+  <hr>
+
+  <h2>수직 네비게이션 바</h2>
+  <p>수직 네비게이션 바를 만들려면 위 코드와 함께 목록안의 a 요소의 스타일을 지정할 수 있습니다.</p>
+  <pre>
+    li a {
+      display: block;
+      width: 60px;
+    }
+  </pre>
+  <p>display: block은 링크 요소를 블록 요소로 바꾸며 텍스트 뿐만 아니라 전체 링크 영역을 클릭할 수 있게 되고 padding및 margin 값을 지정할 수 있습니다.</p>
+  <hr>
+
+  <h2>수직 네비게이션 바 예제</h2>
+  <ul class="verti_navi">
+    <li><a href="#" class="active">집</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">접촉</a></li>
+    <li><a href="#">약</a></li>
+  </ul>
+  <hr>
+
+  <h2>수평 네비게이션 바 예제</h2>
+  <ul class="float_navi">
+    <li><a href="#" class="active">집</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">접촉</a></li>
+    <li style="float: right"><a href="#">약</a></li>
+  </ul>
+
+</body>
+</html>
