@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Counter</h1>
+  <p>CSS counter은 CSS에서 유지하는 "변수"로 CSSS 규칙에 따라 값을 증가 시킬 수 있습니다. (사용 횟수를 추적)</p>
+  <p>카운터를 사용하면 문서의 위치에 따라 콘텐츠의 모양을 조정할 수 있습니다.</p>
+  <hr>
+
+  <h2>카운터 자동 번호 매기기</h2>
+  <p>CSS 카운터는 "변수"와 같습니다. 변수 값은 CSS 규칙(사용된 횟수를 추적)에 의해 증가 될 수 있습니다.</p>
+  <p>CSS 카운터를 사용하기 위해 다음 속성을 사용합니다.</p>
+  <ul>
+    <li>counter-reset - 카운터를 만들거나 재설정 합니다.</li>
+    <li>counter-increment - 카운터 값 증가</li>
+    <li>content - 생성된 내용 삽입</li>
+    <li>counter() 또는 counters()함수 - 요소에 카운터 값을 추가합니다.</li>
+  </ul>
+  <p>CSS counter를 사용하려면 먼저 CSS 카운터를 counter-reset으로 만들어야 합니다. </p>
+  <p>다음 예제에서는 본문 selector의 section counter을 만든 다음 각 h2 element의 카운터 값을 증가시키고 시작 부붙의 section counter 값 을 추가합니다.</p>
+  <pre>
+    body {
+      counter-reset: section;
+    }
+    h2::before {
+      counter-increment: section;
+      content: "Section " counter()section ": ";
+    }
+  </pre>
+  <hr>
+
+  <h2>중첩 카운트</h2>
+  <p>다음 예제에서는 페이지 섹션에 대해 하나의 카운터를 만들고 각 h1 요소에 대해 하나의 카운터를 더 만듭니다.</p>
+  <pre>
+    body {
+      counter-reset: section;
+    }
+    
+    h1 {
+      counter-reset: subsection;
+    }
+    
+    h1::before {
+      counter-increment: section;
+      content: "Section " counter(section) ". ";
+    }
+    
+    h2::before {
+      counter-increment: subsection;
+      content: counter(section) "." counter(subsection) " ";
+    }
+  </pre>
+  <p>카운터는 카운터의 새 인스턴스가 하위 요소에 자동으로 작성되므로 개요 목록을 작성하는데 유용할 수 있습니다. 여기 counters() 에서는 중첩 카운터의 여러 수준 사이에 문자열을 삽입하는 함수를 사용합니다.</p>
+  <pre>
+    ol {
+      counter-reset: section;
+      list-style-type: none;
+    }
+    
+    li::before {
+      counter-increment: section;
+      content: counters(section,".") " ";
+    }
+  </pre>
+</body>
+</html>
