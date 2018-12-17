@@ -1,0 +1,55 @@
+#tr_box {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: translate(50px, 100px);
+  -webkit-transform: translate(50px, 100px);
+  transform: translate(50px, 100px);
+}
+
+#tr_box1 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+#tr_box2 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: scale(1.2, 1.3); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.3); /* Safari */
+  transform: scale(1.2, 1.3);
+}
+
+#tr_box3 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: scale(0.5, 0.5); /* IE 9 */
+  -webkit-transform: scale(0.5, 0.5); /* Safari */
+  transform: scale(0.5, 0.5);
+}
+
+#tr_box4 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: skewX(20deg); /* IE 9 */
+  -webkit-transform: skewX(20deg); /* Safari */
+  transform: skewX(20deg);
+}
+
+#tr_box5 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: skewY(20deg); /* IE 9 */
+  -webkit-transform: skewY(20deg); /* Safari */
+  transform: skewY(20deg);
+}
+
+#tr_box6 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -ms-transform: skew(20deg, 10deg); /* IE 9 */
+  -webkit-transform: skew(20deg, 10deg); /* Safari */
+  transform: skew(20deg, 10deg);
+}
