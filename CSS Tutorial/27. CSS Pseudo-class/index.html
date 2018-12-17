@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Pseudo class</h1>
+  <hr>
+
+  <h2>가상 클래스는 무엇인가?</h2>
+  <p>가상 클래스는 요소의 특수 상태를 정의하는 데 사용된다.</p>
+  <p>예를 들어 다음과 같이 사용할 수 있다.</p>
+  <ul>
+    <li>사용자가 마우스를 올리면 요소의 스타일을 지정합니다.</li>
+    <li>방문한 스타일과 방문하지 않은 스타일이 다르게 적용됩니다.</li>
+    <li>포커스를 얻으면 요소의 스타일을 지정합니다.</li>
+  </ul>
+  <hr>
+
+  <h2>syntax (문법)</h2>
+  <pre>
+    selector:pseudo-class {
+      property:value;
+    }
+  </pre>
+  <hr>
+
+  <h2>a의 가상 클래스</h2>
+  <p class="red">16. CSS Link를 참고해주세요.</p>
+  <a href="../16. CSS Links/index.html">여기를 클릭하면 넘어갑니다.</a>
+  <hr>
+
+  <h2>가상 클래스와 CSS 클래스</h2>
+  <p>가상 클래스는 CSS 클래스와 결합할 수 있습니다.</p>
+  <pre>
+    a.highlight:hover {
+      color: #ff0000;
+    }
+  </pre>
+  <hr>
+
+  <h2>div hover</h2>
+  <p>hover속성에 css 속성을 정의하면 마우스를 올려놓았을시 그 css가 작동합니다.</p>
+  <pre>
+    div:hover {
+      background-color: yellow;
+    }
+  </pre>
+  <hr>
+
+  <h2>간단한 툴팁 호버</h2>
+  <p>div 요소위로 마우스를 가져가면 p 요소가 표시됩니다.</p>
+  <pre>
+    p {
+      display: none;
+      background-color: yellow;
+      padding: 20px;
+    }
+    div:hover p {
+      display: block;
+    }
+  </pre>
+  <hr>
+
+  <h2>CSS 첫번째 자식 가상 클래스</h2>
+  <p class="yellow">핵심: :first-child 의사 클래스는 다른 요소의 첫번쨰 자식을 지정합니다.</p>
+  <pre>
+    p:first-child {
+      color: blue;
+    }
+  </pre>
+  <hr>
+
+  <h2>모든 p 요소의 첫 번째 i 요소와 일치시키기</h2>
+  <p>다음 예제에서 선택기는 모든 p 요소의 첫 번쨰 i 요소를 찾습니다.</p>
+  <pre>
+    p i:first-child {
+      color: blue;
+    }
+  </pre>
+  <hr>
+
+  <h2>모든 첫 번째 하위 p 요소의 모든 i 요소 일치</h2>
+  <p>다음 예제에서 선택기는 다른 요소의 첫번째 자식인 p 요소의 모든 i 요소를 찾습니다.</p>
+  <pre>
+    p:first-child i {
+      color: blue;
+    }
+  </pre>
+  <hr>
+
+  <h2>CSS The : lang 가상 클래스</h2>
+  <p>:lang 의사 클래스는 다른 언어에 대한 특별한 규직을 정의할 수 있습니다.</p>
+  <p>아래 예제 :lang 에서 lang = "no"인 q 요소의 따옴표를 정의합니다.</p>
+  <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+</body>
+</html>
