@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>CSS Opacity / Transparency</h1>
+  <hr>
+
+  <p>이 opacity 속성은 요소의 불투명도 / 투명도를 지정합니다.</p>
+  <hr>
+
+  <h2>투명한 이미지</h2>
+  <p>이 opacity 속성은 0.0 ~ 1.0의 값을 가질 수 있습니다. 값이 낮을 수록 투명합니다.</p>
+  <p class="yellow">IE8 및 이전 버전은 filter: alpha(opacity=x) 이런식으로 사용됩니다. x는 0 - 100의 값을 취할 수 있습니다.</p>
+  <hr>
+
+  <h2>투명한 호버 효과</h2>
+  <p>이 opacity 속성은 종종 :hover 가상 선택기와 함께 사용됩니다.</p>
+  <pre>
+    img {
+      opacity: 0.5;
+      filter: alpha(opacity=50); /* For IE8 and earlier */
+    }
+    img:hover {
+      opacity: 1;
+      filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+  </pre>
+  <hr>
+
+  <h2>투명한 상자</h2>
+  <p>이 opacity 속성을사용하여 요소의 배경에 투명도를 추가하면 모든 자식 요소가 동일한 투명성을 상속합니다. 이렇게 하면 완전히 투명한 요소 내부의 텍스트를 읽기 어려울 수 있습니다.</p>
+  <div class="op_box">
+    <span>불투명도 1</span>
+    <span>불투명도 2</span>
+    <span>불투명도 3</span>
+    <span>불투명도 4</span>
+  </div>
+  <hr>
+
+  <h2>RGBA를 사용한 투명도</h2>
+  <p>위의 예와 같이 자식 요소에 불투명도를 적용하고 싶지 않으시면 rgba 색상값을 사용하면 됩니다.</p>
+  <div class="op_box2">
+    <span>불투명도 1</span>
+    <span>불투명도 2</span>
+    <span>불투명도 3</span>
+    <span>불투명도 4</span>
+  </div>
+  <pre>
+    div {
+      background: rgba(76, 175, 80, 0.3);
+    }
+  </pre>
+  <hr>
+
+  <h2>투명 상자의 텍스트</h2>
+  <p>먼저 배경 이미지와 테두리가 있는 div 요소에 class = "background"를 생성</p>
+  <p>그런다음 첫 번째 div 내에 또다른 div에 class = "transbox"를 만든다.</p>
+  <p>div.transbox에는 배경색이 있고 테두리는 투명하다.</p>
+  <p>div는 투명하고 투명한 div안에 p 요소에 텍스트를 추가한다.</p>
+
+  <pre>
+    div.background {
+      background: url(klematis.jpg) repeat;
+      border: 2px solid black;
+    }
+
+    div.transbox {
+      margin: 30px;
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+
+    div.transbox p {
+      margin: 5%;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    < div class="background" >
+      < div class="transbox" >
+        < p >< /p >
+      < /div >
+    < /div >
+  </pre>
+  <hr>
+
+
+</body>
+</html>
