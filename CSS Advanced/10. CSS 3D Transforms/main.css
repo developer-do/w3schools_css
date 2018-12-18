@@ -1,0 +1,14 @@
+#myDiv { width: 100px; height: 100px; background-color: red; -webkit-transform: rotateX(150deg); transform: rotateX(150deg);}
+#myDiv1 {
+  width: 100px; height: 100px;
+  background-color: red;
+  -webkit-transform: rotateY(130deg);
+  transform: rotateY(130deg);
+}
+#myDiv2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
